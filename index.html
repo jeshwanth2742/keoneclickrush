@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keone Click Rush</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Firebase CDN -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCiKGqhSSCVQ3GPtnMA1DZSzemXLWoBM1M",
+      authDomain: "preepclicker.firebaseapp.com",
+      projectId: "preepclicker",
+      storageBucket: "preepclicker.firebasestorage.app",
+      messagingSenderId: "108481604",
+      appId: "1:108481604:web:ee13c981b725d02f68c011",
+      measurementId: "G-VHRHQF036D"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    const analytics = firebase.analytics();
+  </script>
+</head>
+<body>
+  <p id="guide">⚡ Click the target before it disappears!</p>
+  <!-- Login Screen -->
+  <div id="login-screen" class="screen">
+    <h1>Intent Clicker</h1>
+    <input type="text" id="username" placeholder="Enter your username">
+    <button id="start-btn">Start Game</button>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game-screen" class="screen hidden">
+    <h2 id="timer">Time: 60s</h2>
+    <div id="game-area">
+      <img id="target" src="assets/keone.png" alt="Target">
+    </div>
+    <div id="score">Score: 0</div>
+  </div>
+
+  <!-- Leaderboard Screen -->
+  <div id="leaderboard-screen" class="screen hidden">
+    <h2>Leaderboard</h2>
+    <ul id="leaderboard-list"></ul>
+    <button id="play-again-btn">Play Again</button>
+    <button id="restart-btn">Restart</button>
+  </div>
+<div class="logo">
+    <img src="assets/logo.png" alt="Monad Games">
+    <span>My Anoma Contribution</span>
+  </div>
+
+  <script src="script.js"></script>
+  <a href="https://x.com/undef112174?t=1Jow1smGb5SypxzZezH0Gg&s=09" id="creator-link" target="_blank">Built by @Xiipher</a>
+</body>
+</html>
