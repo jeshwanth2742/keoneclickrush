@@ -23,7 +23,7 @@ let score = 0;
 let timeLeft = 60; // 60 seconds game timer
 let timerInterval;
 let disappearTimeout;
-let disappearTime = 1000; // start at 1000 ms
+let disappearTime = 850; // start at 1000 ms
 
 // --- Start Game ---
 startBtn.addEventListener("click", () => {
@@ -35,7 +35,7 @@ startBtn.addEventListener("click", () => {
 
   score = 0;
   timeLeft = 60;
-  disappearTime = 1000;
+  disappearTime = 850;
   scoreDisplay.textContent = `Score: ${score}`;
   timerDisplay.textContent = `Time: ${timeLeft}s`;
 
@@ -51,7 +51,7 @@ startBtn.addEventListener("click", () => {
     }
 
     if (timeLeft <= 0) endGame();
-  }, 1000);
+  }, 850);
 });
 
 // --- Restart / Play Again ---
